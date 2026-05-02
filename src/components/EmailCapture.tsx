@@ -11,26 +11,30 @@ export default function EmailCapture() {
   };
 
   return (
-    <section className="bg-[#8B3E3E] py-20">
+    <section id="email-capture" className="bg-[#8B3E3E] py-20">
       <div className="max-w-2xl mx-auto px-6 text-center">
-        <span className="text-3xl">🎁</span>
-        <h2 className="font-serif text-3xl md:text-4xl font-bold text-white mt-4 mb-3">
-          Dapatkan Cycle Cheat Sheet
-          <span className="text-[#F9D5D3]"> GRATIS</span>
+        <p className="text-[#F9D5D3] text-xs font-semibold tracking-[0.2em] uppercase mb-4">
+          Belum Siap Beli? Tidak Apa-Apa.
+        </p>
+        <h2 className="font-serif text-3xl md:text-4xl font-bold text-white mt-2 mb-4 leading-tight">
+          Masuk ke Komunitas Kami
+          <br />
+          dan Mulai Dari Sini
         </h2>
         <p className="text-white/70 mb-8 leading-relaxed">
-          Ringkasan 4 fase siklus — apa yang terjadi, bagaimana rasanya, dan apa
-          yang tubuhmu butuhkan. Langsung ke inbox kamu.
+          Dapatkan tips mingguan tentang kesehatan hormon, siklus, dan
+          cycle-based living — langsung ke inbox kamu. Gratis, tanpa spam.
         </p>
 
         {submitted ? (
           <div className="bg-white/10 border border-white/20 rounded-2xl p-8">
             <span className="text-4xl">🌸</span>
             <p className="font-serif text-xl font-bold text-white mt-3">
-              Terima kasih!
+              Selamat datang!
             </p>
             <p className="text-white/70 mt-2">
-              Cycle Cheat Sheet sudah dalam perjalanan ke inbox kamu.
+              Cycle Starter Guide sudah dalam perjalanan ke inbox kamu. Cek folder
+              Promotions jika tidak muncul dalam beberapa menit.
             </p>
           </div>
         ) : (
@@ -47,13 +51,13 @@ export default function EmailCapture() {
               type="submit"
               className="bg-[#FDE6E5] text-[#8B3E3E] px-7 py-4 rounded-full font-semibold text-sm hover:bg-white transition-colors whitespace-nowrap"
             >
-              Kirim Gratis →
+              Daftar Sekarang →
             </button>
           </form>
         )}
 
         <p className="text-white/40 text-xs mt-4">
-          Kami tidak pernah spam. Berhenti berlangganan kapan saja.
+          Tidak pernah spam. Berhenti berlangganan kapan saja.
         </p>
       </div>
     </section>

@@ -4,7 +4,7 @@ import Link from "next/link";
 
 const navLinks = [
   { label: "Tentang", href: "#tentang" },
-  { label: "Edukasi", href: "#edukasi" },
+  { label: "Belajar", href: "#edukasi" },
   { label: "Produk", href: "#produk" },
   { label: "Konsultasi", href: "#konsultasi" },
 ];
@@ -28,14 +28,10 @@ export default function Navbar() {
       }`}
     >
       <div className="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between">
-        <Link
-          href="/"
-          className="font-serif text-xl font-bold text-[#8B3E3E] tracking-wide"
-        >
+        <Link href="/" className="font-serif text-xl font-bold text-[#8B3E3E] tracking-wide">
           JM Chang
         </Link>
 
-        {/* Desktop */}
         <div className="hidden md:flex items-center gap-8">
           {navLinks.map((link) => (
             <a
@@ -47,14 +43,13 @@ export default function Navbar() {
             </a>
           ))}
           <a
-            href="#produk"
+            href="#free-pdf"
             className="bg-[#C96E6A] text-white px-5 py-2.5 rounded-full text-sm font-semibold hover:bg-[#A85450] transition-colors shadow-sm"
           >
-            Mulai Sekarang
+            Mulai Gratis
           </a>
         </div>
 
-        {/* Mobile toggle */}
         <button
           className="md:hidden text-[#3D1A1A] text-2xl w-8 h-8 flex items-center justify-center"
           onClick={() => setMenuOpen(!menuOpen)}
@@ -64,7 +59,6 @@ export default function Navbar() {
         </button>
       </div>
 
-      {/* Mobile menu */}
       {menuOpen && (
         <div className="md:hidden bg-[#FFF8F7] border-t border-[#F9D5D3] px-6 py-6 flex flex-col gap-5">
           {navLinks.map((link) => (
@@ -78,11 +72,11 @@ export default function Navbar() {
             </a>
           ))}
           <a
-            href="#produk"
+            href="#free-pdf"
             className="bg-[#C96E6A] text-white px-5 py-3 rounded-full font-semibold text-center hover:bg-[#A85450] transition-colors"
             onClick={() => setMenuOpen(false)}
           >
-            Mulai Sekarang
+            Mulai Gratis
           </a>
         </div>
       )}
