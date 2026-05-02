@@ -49,6 +49,9 @@ const phases = [
   },
 ];
 
+import CycleWheelDiagram from "@/components/diagrams/CycleWheelDiagram";
+import HormoneWaveChart from "@/components/diagrams/HormoneWaveChart";
+
 export default function CyclePhases() {
   return (
     <section id="edukasi" className="bg-[#FDE6E5] py-24">
@@ -66,6 +69,19 @@ export default function CyclePhases() {
             <strong>hormonal adalah hal yang alami.</strong> Kenali fasenya,
             kenali kebutuhannya.
           </p>
+        </div>
+
+        {/* Cycle Wheel Diagram */}
+        <div className="mb-16">
+          <CycleWheelDiagram />
+        </div>
+
+        {/* Hormone Wave Chart */}
+        <div className="bg-white/70 rounded-3xl p-8 mb-16">
+          <p className="text-center text-xs font-semibold text-[#C96E6A] tracking-[0.2em] uppercase mb-6">
+            Fluktuasi Hormon Selama 28 Hari
+          </p>
+          <HormoneWaveChart />
         </div>
 
         <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">

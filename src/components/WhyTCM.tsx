@@ -52,6 +52,8 @@ const comparisonData = [
   },
 ];
 
+import TCMHerbsDiagram from "@/components/diagrams/TCMHerbsDiagram";
+
 export default function WhyTCM() {
   return (
     <section className="bg-[#FFF8F7] py-24">
@@ -85,6 +87,11 @@ export default function WhyTCM() {
 
         {/* 4 Points */}
         <div className="grid sm:grid-cols-2 gap-6 mb-20">
+          {/* TCM Herbs Diagram */}
+          <div className="sm:col-span-2 bg-[#FFF8F7] rounded-3xl p-6 flex items-center justify-center">
+            <TCMHerbsDiagram />
+          </div>
+
           {tcmPoints.map((point) => (
             <div
               key={point.num}
